@@ -1,6 +1,5 @@
 import { styled, css } from "styled-components";
-
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: ${({ theme }) => theme.colors.darkBLue};
@@ -15,7 +14,7 @@ const buttonStyles = css`
   cursor: pointer;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +23,7 @@ const Container = styled.div`
   padding: 64px 0;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   ${buttonStyles}
 
   ${({ $isContained }) =>
@@ -42,19 +41,3 @@ ${({ $isBorder }) => {
       `;
   }}
 `;
-
-function App() {
-  return (
-    <>
-      <Wrapper>
-        <Container>
-          <div>Hello World.</div>
-          <Button $isContained>Contained Button</Button>
-          <Button $isBorder>Border Button</Button>
-        </Container>
-      </Wrapper>
-    </>
-  );
-}
-
-export default App;
