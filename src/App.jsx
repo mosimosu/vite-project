@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #24272f;
   flex-grow: 1;
+`;
+
+const buttonStyles = css`
+  font-size: 24px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  border: 2px solid #139eca;
+  cursor: pointer;
 `;
 
 const Container = styled.div`
@@ -17,21 +25,14 @@ const Container = styled.div`
 `;
 
 const ContainedButton = styled.button`
-  font-size: 24px;
-  padding: 12px 24px;
-  border-radius: 4px;
-  background-color: #139eca;
+  ${buttonStyles}
   color: white;
-  cursor: pointer;
+  border: 2px solid #139eca;
 `;
 const BorderButton = styled.button`
-  font-size: 24px;
-  padding: 12px 24px;
-  border-radius: 4px;
-  border: 2px solid #139eca;
+  ${buttonStyles}
   background-color: transparent;
   color: #139eca;
-  cursor: pointer;
 `;
 
 function App() {
