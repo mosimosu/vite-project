@@ -24,15 +24,23 @@ const Container = styled.div`
   padding: 64px 0;
 `;
 
-const ContainedButton = styled.button`
+const Button = styled.button`
   ${buttonStyles}
-  color: white;
-  border: 2px solid #139eca;
-`;
-const BorderButton = styled.button`
-  ${buttonStyles}
-  background-color: transparent;
-  color: #139eca;
+
+  ${({ $isContained }) =>
+    $isContained &&
+    css`
+      background-color: #139eca;
+      border: 2px solid #139eca;
+    `}
+
+${({ $isBorder }) => {
+    $isBorder &&
+      css`
+        background-color: transparent;
+        border: 2px solid #139eca;
+      `;
+  }}
 `;
 
 function App() {
@@ -41,8 +49,8 @@ function App() {
       <Wrapper>
         <Container>
           <div>Hello World.</div>
-          <ContainedButton>Contained Button</ContainedButton>
-          <BorderButton>Border Button</BorderButton>
+          <Button $isContained>Contained Button</Button>
+          <Button $isBorder>Border Button</Button>
         </Container>
       </Wrapper>
     </>
