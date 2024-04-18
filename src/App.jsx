@@ -1,9 +1,18 @@
-import { useState } from "react";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  flex-grow: 1;
+`;
 
 function App() {
   return (
     <>
-      <div>Hello World.</div>
+      <Wrapper>
+        <div>Hello World.</div>
+      </Wrapper>
     </>
   );
 }

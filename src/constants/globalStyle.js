@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 html, body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100dvh;
     
